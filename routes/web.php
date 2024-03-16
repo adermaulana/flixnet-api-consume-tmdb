@@ -1,0 +1,18 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+Route::get('/',App\Livewire\Home::class)->name('home');
+Route::get('/movies',App\Livewire\Movies::class)->name('movies');
+Route::get('/trending',App\Livewire\Trending::class)->name('trending');
+Route::get('/my-list',App\Livewire\Mylist::class)->name('my-list');
