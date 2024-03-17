@@ -14,7 +14,7 @@ class Home extends Component
     {
         $client = new Client();
 
-        $response = $client->request('GET', 'https://api.themoviedb.org/3/discover/movie?api_key=3c4ef25e9f9b0cea6391391087e35463');
+        $response = $client->request('GET', 'https://api.themoviedb.org/3/discover/movie?api_key=' . env('TMBD_API'));
         $this->responseData = json_decode($response->getBody(), true);
         $this->imagepath = "https://image.tmdb.org/t/p/original/";
     }
