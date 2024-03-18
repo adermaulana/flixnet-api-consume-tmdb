@@ -10,6 +10,7 @@ class Home extends Component
 
     public $responseData;
     public $imagepath;
+    
     public function mount()
     {
         $client = new Client();
@@ -20,7 +21,7 @@ class Home extends Component
     }
 
     public function render()
-    {
+    {   
         return view('livewire.home');
     }
 }
